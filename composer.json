@@ -1,0 +1,34 @@
+{
+    "name": "adminq/yii2-helpers",
+    "description": "Static helper methods in addition to the Yii 2 Framework.",
+    "type": "library",
+    "require": {
+        "yiisoft/yii2": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "luya\\yii\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Shchednyj",
+            "email": "admin@adminq.ru"
+        }
+    ],   
+    "config": {
+        "fxp-asset": {
+            "enabled": false
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true            
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
