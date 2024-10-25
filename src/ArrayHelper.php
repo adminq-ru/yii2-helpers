@@ -1,5 +1,4 @@
 <?php
-
 namespace adminq\yii\helpers;
 
 use yii\helpers\BaseArrayHelper;
