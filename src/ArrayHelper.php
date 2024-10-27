@@ -101,4 +101,25 @@ class ArrayHelper extends BaseArrayHelper
         }
         return $items;
     }
+
+    /**
+     * Вернет часть массива указанной длины (именно такой, даже если сдвиг не дает нужной длины)
+     * Если массив [1,2,3,4,5,6], то subArrayLength($array, 3, 5) - вернет в отличии от array_slice
+     * все равно 3 элемента [4, 5, 6], хотя по сдвигу 5 остается только [6]
+     * @param $array
+     * @param $length
+     * @param int $offset
+     * @return array
+     */
+    public static function subArrayLength($array, $length, $offset = 0)
+    {
+        if ($offset < 0) {
+            $offset = 0;
+        }
+        $chain = array_slice($array, $offset, $length);
+        if (count($chain) != $length) {
+            $chain = array_slice($array, count($array)-$length, $length);
+        }
+        return $chain;
+    }
 }
