@@ -1,5 +1,6 @@
 <?php
-namespace adminq\yii\helpers;
+
+namespace adminq\helpers;
 
 use yii\helpers\BaseArrayHelper;
 use yii\helpers\VarDumper;
